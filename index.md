@@ -5,13 +5,14 @@
 	<li>ML is one of the applications of artificial intelligence (AI), that iteratively learn from the data, unlike typical programming.</li>
 	<li>ML algos can find insights in the data even if they aren’t specifically instructed what to look for in the data.</li>
 </ul>
-<h3 class="graf graf--h3">Terms</h3>
+
+<h3 class="graf graf--h3">Branches</h3>
+<strong class="markup--strong markup--blockquote-strong">Supervised Learning</strong>: Uses Labeled data for prediction.(Eg: previous house sales with info how much each house sold for -- labeled dataset.), Once your model is ready we can use it for prediction where we only need features(size and floors of the house) of the unseen data to be given to the model.
+<h4 class="graf graf--h4">Types</h4>
 <ul>
 	<li><strong class="markup--strong markup--blockquote-strong">Classification</strong>: When we deal with categorical data, it is termed as classification. ex: Given person's Height and weight predict the gender. (predicting the class male vs female, Male and female are categories henceforth called categorical data.)</li>
 	<li><strong class="markup--strong markup--blockquote-strong">Regression</strong>: When we deal with continuous data, it is termed as Regression.          ex: Given house size and no of floors predict the House selling price.(Predicting a continuous number of 52.5 lakh, 52.5 is a continuous data unlike)</li>
 </ul>
-<h3 class="graf graf--h3">Branches</h3>
-<strong class="markup--strong markup--blockquote-strong">Supervised Learning</strong>: Uses Labeled data for prediction.(Eg: previous house sales with info how much each house sold for -- labeled dataset.), Once your model is ready we can use it for prediction where we only need features(size and floors of the house) of the unseen data to be given to the model.
 
 <strong class="markup--strong markup--blockquote-strong">Unsupervised Learning</strong>: Unlabeled data, where we can <strong class="markup--strong markup--blockquote-strong">cluster </strong>data into similar groups by some common patterns among them. It's then up to the data-scientist how to interpret the clusters.
 
@@ -56,12 +57,12 @@ Now if our points are little scattered unlike the previous example, we try to fi
 We have to make use of Loss function and gradient Descent to achieve the same.
 <h2 class="graf graf--h3"><strong>  Cost Function</strong></h2>
 Cost function tells us how well our model fits into the data. We can measure the accuracy of our hypothesis function by using a cost function. This takes an average difference of all the results of the hypothesis with inputs from x's and the actual output y's.
+Average difference between the $${\hat{y}}$$ and y is known as <strong>Mean Squared Error</strong>. 
 
 <strong>Hypothesis Function:</strong> Rewrite the line equation y = mx + b as a function $${h_\theta(x) = \theta_0 +\theta_1x}$$ (Hypothesis Function) where $${\theta_0}$$=b and $${\theta_1}$$=m
 
 $${\theta_i}$$ = weights(which scales the features), $${x_{i}}$$ = features, $${y_{i}}$$ = original output, $${\hat{y}_{i}}$$ = $${h_\theta(x)_i}$$ = expected output by hypothesis function
 
-<strong>Mean Squared Error:</strong> Cost Function helps us to measure the accuracy of the Hypothesis function, By taking average difference between the \hat{y} and y
 
 $${J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}_{i}- y_{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2}$$
 
