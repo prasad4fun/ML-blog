@@ -56,8 +56,8 @@ Now if our points are little scattered unlike the previous example, we try to fi
 
 We have to make use of Loss function and gradient Descent to achieve the same.
 <h2 class="graf graf--h3"><strong>  Cost Function</strong></h2>
-Cost function tells us how well our model fits into the data. We can measure the accuracy of our hypothesis function by using a cost function. This takes an average difference of all the results of the hypothesis with inputs from x's and the actual output y's.
-Average difference between the $${\hat{y}}$$ and y is known as <strong>Mean Squared Error</strong>. 
+Cost function $${J(\theta_0, \theta_1)}$$ tells us how well our model fits into the data. We can measure the accuracy of our hypothesis function by using a cost function. This takes an average difference of all the results of the hypothesis with inputs from x's and the actual output y's.
+Average difference between the $${\hat{y}}$$ and y is known as <strong>Mean Squared Error</strong>.
 
 <strong>Hypothesis Function:</strong> Rewrite the line equation y = mx + b as a function $${h_\theta(x) = \theta_0 +\theta_1x}$$ (Hypothesis Function) where $${\theta_0}$$=b and $${\theta_1}$$=m
 
