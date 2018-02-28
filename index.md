@@ -71,7 +71,9 @@ Now we have a way to measure our Hypothesis Function given $${\theta_0, \theta_1
 To automatically find best $${\theta_0}$$ and $${\theta_1}$$, we can use Gradient descent.
 
 Gradient descent:  keep changing $${\theta_0}$$ and $${\theta_1}$$ to reduce $${J(\theta_0, \theta_1)}$$
-[a relative link](/assets/GD.gif)
+
+<img class="" src=[a relative link](/assets/GD.gif) alt="Image result for linear regression" width="333" height="221" />
+
 
 Intution:
 
