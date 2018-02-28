@@ -1,4 +1,5 @@
 
+<title>Linear Regression Basic Flow</title>
 <h3 class="graf graf--h3">Defn</h3>
 <ul>
 	<li>ML is one of the applications of artificial intelligence (AI), that iteratively learn from the data, unlike typical programming.</li>
@@ -7,7 +8,7 @@
 <h3 class="graf graf--h3">Terms</h3>
 <ul>
 	<li><strong class="markup--strong markup--blockquote-strong">Classification</strong>: When we deal with categorical data, it is termed as classification. ex: Given person's Height and weight predict the gender. (predicting the class male vs female, Male and female are categories henceforth called categorical data.)</li>
-	<li><strong class="markup--strong markup--blockquote-strong">Regression</strong>: When we deal with continuous data, it is termed as Regression.          ex: Given house size and no of floors predict the House selling price.(Predicting a continuous number of 52.5 lakh, 52.5 is a continuous data unlike)</li>
+	<li><strong class="markup--strong markup--blockquote-strong">Regression</strong>: When we deal with continuous data, it is termed as Regression.          ex: Given house size and no of floors predict the House selling price.(Predicting a continuous number of 52.5 lakh, 52.5 is a continuous data unlike)</li>
 </ul>
 <h3 class="graf graf--h3">Branches</h3>
 <strong class="markup--strong markup--blockquote-strong">Supervised Learning</strong>: Uses Labeled data for prediction.(Eg: previous house sales with info how much each house sold for -- labeled dataset.), Once your model is ready we can use it for prediction where we only need features(size and floors of the house) of the unseen data to be given to the model.
@@ -18,27 +19,27 @@
 
 <hr />
 
-<h2 class="graf graf--h3">                                       Math Essentials</h2>
-<strong class="markup--strong markup--blockquote-strong">scalar vs vector: </strong><strong class="markup--strong markup--blockquote-strong"> </strong>Vector is something which got magnitude and direction, and a scalar helps to scale up the data.
+<h2 class="graf graf--h3">                                       Math Essentials</h2>
+<strong class="markup--strong markup--blockquote-strong">scalar vs vector: </strong><strong class="markup--strong markup--blockquote-strong"> </strong>Vector is something which got magnitude and direction, and a scalar helps to scale up the data.
 
 <img class="alignnone  wp-image-15" src="https://themlrecipes.files.wordpress.com/2018/02/vector.png" alt="vector" width="130" height="141" />
 
-ex: let's say a man walks at 1kmph(magnitude) in North East direction, which can be represented as [1, 1.5], now if we scale up the same vector by multiplying by 2 (magnitude/scalar), he reaches a point at [2, 3] after 2 hours.
+ex: let's say a man walks at 1kmph(magnitude) in North East direction, which can be represented as [1, 1.5], now if we scale up the same vector by multiplying by 2 (magnitude/scalar), he reaches a point at [2, 3] after 2 hours.
 
-A vector can be more than two dimensional, our computers are good at calculating Dot products of vector and hence in the following tutorial, we try to see a vectorized implementation for all mathematical equations.
+A vector can be more than two dimensional, our computers are good at calculating Dot products of vector and hence in the following tutorial, we try to see a vectorized implementation for all mathematical equations.
 
-<strong class="markup--strong markup--blockquote-strong">Line Equation:  </strong>y = mx + b,  aline equation which fits a linear relationship between x & y.
+<strong class="markup--strong markup--blockquote-strong">Line Equation:  </strong>y = mx + b,  aline equation which fits a linear relationship between x & y.
 
 <hr />
 
-<h2 class="graf graf--h3">                             <strong>Simple Linear regression</strong></h2>
+<h2 class="graf graf--h3">                             <strong>Simple Linear regression</strong></h2>
 <img class="" src="https://www.mathworks.com/help/symbolic/mupad_ug/math-statistics-fits-linear-36e42cfe.png" alt="Image result for linear regression" width="333" height="221" />
 
 Let's say we have to fit a straight line to the given data, as shown above, the line equation can be as follows.
 
 slope m = rise/run, (14-12)/(2-1) = 2
 
-Y-intercept b = 9 (where line crosses y-axis, if we imagine X-axis starting from zero, Line would be crossing y-axis at y=9)
+Y-intercept b = 9 (where line crosses y-axis, if we imagine X-axis starting from zero, Line would be crossing y-axis at y=9)
 
 Y = 2X + 9
 
@@ -48,17 +49,17 @@ Now if our points are little scattered unlike the previous example, we try to fi
 
 <img src="https://scontent.fblr4-1.fna.fbcdn.net/v/t34.0-12/28534536_1403493129762387_1986054821_n.png?oh=414bfcee5200ea3d4507513230d645e8&oe=5A98DCB0" />
 
-<strong class="markup--strong markup--blockquote-strong">Model:  </strong>Now based on above line equation we can approximate any seen or unseen y given x. This is something which we refer to the linear regression Model.
+<strong class="markup--strong markup--blockquote-strong">Model:  </strong>Now based on above line equation we can approximate any seen or unseen y given x. This is something which we refer to the linear regression Model.
 
 <strong class="markup--strong markup--blockquote-strong">Problem</strong>: Now the problem is to figure out a such a Straight line like in the above figure which can approximate by considering all the given points.
 
 We have to make use of Loss function and gradient Descent to achieve the same.
-<h2 class="graf graf--h3"><strong>                                   Cost/</strong><strong>Loss Function</strong></h2>
+<h2 class="graf graf--h3"><strong>  Cost</strong> Function</strong></h2>
 Cost function tells us how well our model fits into the data.
 
-If we rewrite the line equation y = mx + b as a function $${h_\theta(x) = \theta_0 +\theta_1x}$$ (Hypothesis Function) where $${\theta_0}$$=b and $${\theta_1}$$=m
+<strong>Hypothesis Function:</strong> If we rewrite the line equation y = mx + b as a function $${h_\theta(x) = \theta_0 +\theta_1x}$$ (Hypothesis Function) where $${\theta_0}$$=b and $${\theta_1}$$=m
 
-$${\theta_i}$$ = weights(which scales the features), $${\x_i}$$ = features, $${\y_i}$$ = original output, $${\hat{y}_{i}}$$ = $${h_\theta(x)_i}$$ = expected output by hypothesis function
+$${\theta_i}$$ = weights(which scales the features), $${x_{i}}$$ = features, $${y_{i}}$$ = original output, $${\hat{y}_{i}}$$ = $${h_\theta(x)_i}$$ = expected output by hypothesis function
 
 <strong>Mean Squared Error:</strong> Cost Function helps us to measure the accuracy of the Hypothesis function, By taking average difference between the \hat{y} and y
 
