@@ -52,33 +52,33 @@ Now if our points are little scattered unlike the previous example, we try to fi
 
 <strong class="markup--strong markup--blockquote-strong">Problem</strong>: Now the problem is to figure out a such a Straight line like in the above figure which can approximate by considering all the given points.
 
-    We have to make use of Loss function and gradient Descent to achieve the same.
-    <h2 class="graf graf--h3"><strong>                                   Cost/</strong><strong>Loss Function</strong></h2>
-    Cost function tells us how well our model fits into the data.
+We have to make use of Loss function and gradient Descent to achieve the same.
+<h2 class="graf graf--h3"><strong>                                   Cost/</strong><strong>Loss Function</strong></h2>
+Cost function tells us how well our model fits into the data.
 
-    If we rewrite the line equation y = mx + b as a function $${h_\theta(x) = \theta_0 +\theta_1x}$$(Hypothesis Function) where \theta_0=b and \theta_1=m
+If we rewrite the line equation y = mx + b as a function $${h_\theta(x) = \theta_0 +\theta_1x}$$(Hypothesis Function) where \theta_0=b and \theta_1=m
 
-    \theta_i = weights(which scales the features), \x_i = features, \y_i = original output, \hat{y}_{i} = h_\theta(x)_i = expected output by hypothesis function
+\theta_i = weights(which scales the features), \x_i = features, \y_i = original output, \hat{y}_{i} = h_\theta(x)_i = expected output by hypothesis function
 
-    <strong>Mean Squared Error:</strong> Cost Function helps us to measure the accuracy of the Hypothesis function, By taking average difference between the \hat{y} and y
+<strong>Mean Squared Error:</strong> Cost Function helps us to measure the accuracy of the Hypothesis function, By taking average difference between the \hat{y} and y
 
-    J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}_{i}- y_{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2
+J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}_{i}- y_{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2
 
-    Now we have to automate finding T0 and T1 which minimizes the cost function J, so that we get the best model to work with.
+Now we have to automate finding T0 and T1 which minimizes the cost function J, so that we get the best model to work with.
 
-    To automatically find \theta_0 and \theta_1, we can use Gradient descent.
+To automatically find \theta_0 and \theta_1, we can use Gradient descent.
 
-    Gradient descent:  keep changing \theta_0 and \theta_1 to reduce J(\theta_0, \theta_1)
+Gradient descent:  keep changing \theta_0 and \theta_1 to reduce J(\theta_0, \theta_1)
 
-    Intution:
+Intution:
 
-    eqn
+eqn
 
-    lets try to minimize only one parameter T1 for simplicity
-    $${
-    J(\theta) =\frac{1}{2m}
-    [\sum^m_{i=1}(h_\theta(x^{(i)}) -
-    y^{(i)})2 + \lambda\sum^n_{j=1}\theta^2_j
-    }$$
+lets try to minimize only one parameter T1 for simplicity
+$${
+J(\theta) =\frac{1}{2m}
+[\sum^m_{i=1}(h_\theta(x^{(i)}) -
+y^{(i)})2 + \lambda\sum^n_{j=1}\theta^2_j
+}$$
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
