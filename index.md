@@ -86,11 +86,56 @@ Intution:
 eqn
 $${\begin{align*} \text{repeat until convergence: } \lbrace & \newline \theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \newline \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right) \newline \rbrace& \end{align*}}$$
 
-lets try to minimize only one parameter T1 for simplicity
-$${
-J(\theta) =\frac{1}{2m}
-[\sum^m_{i=1}(h_\theta(x^{(i)}) -
-y^{(i)})2 + \lambda\sum^n_{j=1}\theta^2_j
-}$$
+<strong class="markup--strong markup--blockquote-strong">Example:</strong>
+
+	# Code source: Jaques Grobler
+	# License: BSD 3 clause
+
+
+	import matplotlib.pyplot as plt
+	import numpy as np
+	from sklearn import datasets, linear_model
+	from sklearn.metrics import mean_squared_error, r2_score
+
+	# Load the diabetes dataset
+	diabetes = datasets.load_diabetes()
+
+
+	# Use only one feature
+	diabetes_X = diabetes.data[:, np.newaxis, 2]
+
+	# Split the data into training/testing sets
+	diabetes_X_train = diabetes_X[:-20]
+	diabetes_X_test = diabetes_X[-20:]
+
+	# Split the targets into training/testing sets
+	diabetes_y_train = diabetes.target[:-20]
+	diabetes_y_test = diabetes.target[-20:]
+
+	# Create linear regression object
+	regr = linear_model.LinearRegression()
+
+	# Train the model using the training sets
+	regr.fit(diabetes_X_train, diabetes_y_train)
+
+	# Make predictions using the testing set
+	diabetes_y_pred = regr.predict(diabetes_X_test)
+
+	# The coefficients
+	print('Coefficients: \n', regr.coef_)
+	# The mean squared error
+	print("Mean squared error: %.2f"
+	      % mean_squared_error(diabetes_y_test, diabetes_y_pred))
+	# Explained variance score: 1 is perfect prediction
+	print('Variance score: %.2f' % r2_score(diabetes_y_test, diabetes_y_pred))
+
+	# Plot outputs
+	plt.scatter(diabetes_X_test, diabetes_y_test,  color='black')
+	plt.plot(diabetes_X_test, diabetes_y_pred, color='blue', linewidth=3)
+
+	plt.xticks(())
+	plt.yticks(())
+
+	plt.show()
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
