@@ -88,9 +88,6 @@ $${\begin{align*} \text{repeat until convergence: } \lbrace & \newline \theta_0 
 
 <strong class="markup--strong markup--blockquote-strong">Example:</strong>
 
-	# Code source: Jaques Grobler
-	# License: BSD 3 clause
-
 
 	import matplotlib.pyplot as plt
 	import numpy as np
