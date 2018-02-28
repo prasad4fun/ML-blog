@@ -56,19 +56,19 @@ We have to make use of Loss function and gradient Descent to achieve the same.
 <h2 class="graf graf--h3"><strong>                                   Cost/</strong><strong>Loss Function</strong></h2>
 Cost function tells us how well our model fits into the data.
 
-If we rewrite the line equation y = mx + b as a function $${h_\theta(x) = \theta_0 +\theta_1x}$$(Hypothesis Function) where \theta_0=b and \theta_1=m
+If we rewrite the line equation y = mx + b as a function $${h_\theta(x) = \theta_0 +\theta_1x}$$ (Hypothesis Function) where $${\theta_0}$$=b and $${\theta_1}$$=m
 
-\theta_i = weights(which scales the features), \x_i = features, \y_i = original output, \hat{y}_{i} = h_\theta(x)_i = expected output by hypothesis function
+$${\theta_i}$$ = weights(which scales the features), $${\x_i}$$ = features, $${\y_i}$$ = original output, $${\hat{y}_{i}}$$ = $${h_\theta(x)_i}$$ = expected output by hypothesis function
 
 <strong>Mean Squared Error:</strong> Cost Function helps us to measure the accuracy of the Hypothesis function, By taking average difference between the \hat{y} and y
 
-J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}_{i}- y_{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2
+$${J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}_{i}- y_{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2}$$
 
-Now we have to automate finding T0 and T1 which minimizes the cost function J, so that we get the best model to work with.
+Now we have to automate finding $${\theta_0, \theta_1}$$ which minimizes the cost function J, so that we get the best model to work with.
 
-To automatically find \theta_0 and \theta_1, we can use Gradient descent.
+To automatically find $${\theta_0}$$ and $${\theta_1}$$, we can use Gradient descent.
 
-Gradient descent:  keep changing \theta_0 and \theta_1 to reduce J(\theta_0, \theta_1)
+Gradient descent:  keep changing $${\theta_0}$$ and $${\theta_1}$$ to reduce $${J(\theta_0, \theta_1)}$$
 
 Intution:
 
