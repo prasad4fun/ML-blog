@@ -31,6 +31,8 @@ A vector can be more than two dimensional, our computers are good at calculating
 
 <strong class="markup--strong markup--blockquote-strong">Line Equation:  </strong>y = mx + b,  aline equation which fits a linear relationship between x & y.
 
+<strong class="markup--strong markup--blockquote-strong">Derivation & partial derivation:  </strong> wiggling x effects f(x) 
+examples — f(a) = 3a, f(a) = a**2
 <hr />
 
 <h2 class="graf graf--h3">                             <strong>Simple Linear regression</strong></h2>
@@ -70,15 +72,19 @@ Now we have a way to measure our Hypothesis Function given $${\theta_0, \theta_1
 
 To automatically find best $${\theta_0}$$ and $${\theta_1}$$, we can use Gradient descent.
 
-Gradient descent:  keep changing $${\theta_0}$$ and $${\theta_1}$$ to reduce $${J(\theta_0, \theta_1)}$$
+Gradient descent:  keep changing $${\theta_0}$$ and $${\theta_1}$$ to reduce $${J(\theta_0, \theta_1)}$$ until we hopefully end up at minimum.
 
-<img class="" src="/assets/GD.gif" alt="Image result for linear regression" width="333" height="221" />
+<img class="" src="https://github.com/prasad4fun/ML-blog/blob/gh-pages/assets/GD.gif" alt="Image result for linear regression" width="333" height="221" />
+<img class="" src="https://github.com/prasad4fun/ML-blog/blob/gh-pages/assets/capure1.png" alt="Image result for linear regression" width="333" height="221" />
+<img class="" src="https://github.com/prasad4fun/ML-blog/blob/gh-pages/assets/capure1.png" alt="Image result for linear regression" width="333" height="221" />
+<img class="" src="https://github.com/prasad4fun/ML-blog/blob/gh-pages/assets/capure3.png" alt="Image result for linear regression" width="333" height="221" />
+<img class="" src="https://github.com/prasad4fun/ML-blog/blob/gh-pages/assets/capure4.png" alt="Image result for linear regression" width="333" height="221" />
 
 
 Intution:
 
 eqn
-$${\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)}$$
+$${\begin{align*} \text{repeat until convergence: } \lbrace & \newline \theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \newline \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right) \newline \rbrace& \end{align*}}$$
 
 lets try to minimize only one parameter T1 for simplicity
 $${
