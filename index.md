@@ -72,7 +72,7 @@ To automatically find best $${\theta_0}$$ and $${\theta_1}$$, we can use Gradien
 
 Gradient descent:  keep changing $${\theta_0}$$ and $${\theta_1}$$ to reduce $${J(\theta_0, \theta_1)}$$
 
-<img class="" src=[a relative link](/assets/GD.gif) alt="Image result for linear regression" width="333" height="221" />
+<img class="" src="/assets/GD.gif" alt="Image result for linear regression" width="333" height="221" />
 
 
 Intution:
