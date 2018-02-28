@@ -53,7 +53,7 @@ Now if our points are little scattered unlike the previous example, we try to fi
 <strong class="markup--strong markup--blockquote-strong">Problem</strong>: Now the problem is to figure out a such a Straight line like in the above figure which can approximate by considering all the given points.
 
 We have to make use of Loss function and gradient Descent to achieve the same.
-<h2 class="graf graf--h3"><strong>                                   Cost/</strong><strong>Loss Function</strong></h2>
+<h2 class="graf graf--h3"><strong>                                   Cost</strong><strong> Function</strong></h2>
 Cost function tells us how well our model fits into the data.
 
 If we rewrite the line equation y =mx + b as a function, f(x) = b + mx
