@@ -8,7 +8,7 @@
 
 <h3 class="graf graf--h3">Branches</h3>
 <strong class="markup--strong markup--blockquote-strong">Supervised Learning</strong>: Uses Labeled data for prediction.(Eg: previous house sales with info how much each house sold for -- labeled dataset.), Once your model is ready we can use it for prediction where we only need features(size and floors of the house) of the unseen data to be given to the model.
-<h4 class="graf graf--h4">Types</h4>
+<h4 class="graf graf--h4">    Types</h4>
 <ul>
 	<li><strong class="markup--strong markup--blockquote-strong">Classification</strong>: When we deal with categorical data, it is termed as classification. ex: Given person's Height and weight predict the gender. (predicting the class male vs female, Male and female are categories henceforth called categorical data.)</li>
 	<li><strong class="markup--strong markup--blockquote-strong">Regression</strong>: When we deal with continuous data, it is termed as Regression.          ex: Given house size and no of floors predict the House selling price.(Predicting a continuous number of 52.5 lakh, 52.5 is a continuous data unlike)</li>
@@ -71,10 +71,12 @@ Now we have a way to measure our Hypothesis Function given $${\theta_0, \theta_1
 To automatically find best $${\theta_0}$$ and $${\theta_1}$$, we can use Gradient descent.
 
 Gradient descent:  keep changing $${\theta_0}$$ and $${\theta_1}$$ to reduce $${J(\theta_0, \theta_1)}$$
+[a relative link](/assets/GD.gif)
 
 Intution:
 
 eqn
+$${\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)}$$
 
 lets try to minimize only one parameter T1 for simplicity
 $${
