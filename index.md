@@ -74,11 +74,11 @@ To automatically find best $${\theta_0}$$ and $${\theta_1}$$, we can use Gradien
 
 Gradient descent:  keep changing $${\theta_0}$$ and $${\theta_1}$$ to reduce $${J(\theta_0, \theta_1)}$$ until we hopefully end up at minimum.
 
-<img class="" src="https://github.com/prasad4fun/ML-blog/blob/gh-pages/assets/GD.gif" alt="Image result for linear regression" width="333" height="221" />
-<img class="" src="https://github.com/prasad4fun/ML-blog/blob/gh-pages/assets/Capture1.PNG" alt="Image result for linear regression" width="333" height="221" />
-<img class="" src="https://github.com/prasad4fun/ML-blog/blob/gh-pages/assets/Capture2.PNG" alt="Image result for linear regression" width="333" height="221" />
-<img class="" src="https://github.com/prasad4fun/ML-blog/blob/gh-pages/assets/Capture3.PNG" alt="Image result for linear regression" width="333" height="221" />
-<img class="" src="https://github.com/prasad4fun/ML-blog/blob/gh-pages/assets/Capture4.PNG" alt="Image result for linear regression" width="333" height="221" />
+<img class="" src="https://i2.wp.com/mlsimplifiedbyhari.files.wordpress.com/2018/03/gd.gif" alt="Image result for linear regression" width="333" height="221" />
+<img class="" src="https://i2.wp.com/mlsimplifiedbyhari.files.wordpress.com/2018/03/capture1.png" alt="Image result for linear regression" width="333" height="221" />
+<img class="" src="https://i2.wp.com/mlsimplifiedbyhari.files.wordpress.com/2018/03/capture2.png" alt="Image result for linear regression" width="333" height="221" />
+<img class="" src="https://i2.wp.com/mlsimplifiedbyhari.files.wordpress.com/2018/03/capture3.png" alt="Image result for linear regression" width="333" height="221" />
+<img class="" src="https://i2.wp.com/mlsimplifiedbyhari.files.wordpress.com/2018/03/capture4.png" alt="Image result for linear regression" width="333" height="221" />
 
 
 Intution:
